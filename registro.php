@@ -17,29 +17,26 @@
         <!-- <form action="./tempo.php" method="get"> -->
             <hr>
             <div>
-                <label for="nombre_usuario">Ingresa nombre usuario:</label>
-                <input type="text" name="nombre_usuario" required maxlength="100" placeholder="Ingresa tu Nombre">
+                <label for="nombre_artista">Ingresa el nombre del artista: </label>
+                <input type="text" name="nombre_artista" required maxlength="100" placeholder="Nombre: ">
                 <br><br>
-                <label for="carrera">Carrera:</label>
-                <input type="text" name="carrera" required maxlength="100" placeholder="Ingresa tu carrera">
+                <label for="albums">¿Cuantos albumes tiene?</label>
+                <input type="text" name="albums" required maxlength="100" placeholder="Albumes: ">
                 <br><br>
-                <label for="email">Correo:</label>
-                <input type="mail" name="email" required maxlength="100" placeholder="Ingresa tu correo">
+                <label for="genero_musical">¿Qué genero musical representa?</label>
+                <input type="text" name="genero_musical" required maxlength="100" placeholder="Genero: ">
                 <br><br>
-                <label for="no_cuenta">Numero de cuenta:</label>
-                <input type="text" name="no_cuenta" required maxlength="100" placeholder="Ingresa tu numero de cuenta">
+                <label for="disquera">¿Cual es su disquera?</label>
+                <input type="text" name="disquera" required maxlength="100" placeholder="Disquera: ">
                 <br><br>
-                <label for="direccion">Direccion particular:</label>
-                <input type="text" name="direccion" required maxlength="100" placeholder="Ingresa tu direccion particular">
+                <label for="usuario">Usuario o correo electronico</label>
+                <input type="text" name="usuario" required maxlength="100" placeholder="Usuario o email: ">
                 <br><br>
-                <label for="telefono">Telefono:</label>
-                <input type="text" name="telefono" required maxlength="8" placeholder="Ingresa tu telefono">
-                <br><br>
-                <label for="password">contraseña:</label>
-                <input type="password" name="password" required maxlength="8" placeholder="Ingresa tu contraseña">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" name="contraseña" required maxlength="10" placeholder="Password: ">
                 <br><br>
             </div>
-             <button type="submit" name="submit"  >Enviar registro</button>
+             <button type="submit" name="submit">Enviar registro</button>
         </form>
     </div>
 </body>
