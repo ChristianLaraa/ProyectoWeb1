@@ -11,13 +11,13 @@
     <h1 style=" text-align: center;" >Elimina Usuario</h1>
     <form style=" text-align: center;" method="POST" action="./logica/deleteUsuario.php">
 
-        <input  type="text" name="nombre_artista" placeholder="Nombre del Artista" />
+        <input  type="text" name="usuario" placeholder="Usuario o correo del Artista"/>
         <br />
         <button type="submit">Eliminar usuario</button>
 
     </form>
     
-    <h1><a href="index.php">Inicio de listas</a></h1>
+    <h1><a href="principal.php">Inicio de listas</a></h1>
 
 </body>
 

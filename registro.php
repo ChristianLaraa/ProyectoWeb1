@@ -13,7 +13,7 @@
     </header>
     
     <div>
-        <form action="./enviarRegistro.php" method="post">
+        <form action="./logica/enviarRegistro.php" method="post">
         <!-- <form action="./tempo.php" method="get"> -->
             <hr>
             <div>
@@ -36,11 +36,11 @@
                 <input type="password" name="contraseña" required maxlength="10" placeholder="Password: ">
                 <br><br>
             </div>
-             <button type="submit" name="submit">Enviar registro</button>
+             <button type="submit" name="submit"  >Enviar registro</button>
         </form>
     </div>
 </body>
 </html>
 
-<a href='Registro.php'>Nuevo registro</a>
-<a href='index.php'>Ver registro</a>
+<a href='./Registro.php'>Nuevo registro</a>
+<a href='./Principal.php'>Ver registro</a>
