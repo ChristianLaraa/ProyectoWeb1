@@ -1,79 +1,79 @@
 <?php
 session_start();
-$usuario= $_SESSION['usermane'];//413112576
+$usuario = $_SESSION['usermane']; // 413112576
 
+if (!isset($usuario)) {
+    header("location: ./index.php");
+} else {
+    echo "<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Bienvenido</title>
+    <link rel='stylesheet' href='./styles/stylesPrincipal.css'>
+</head>
+<body>
+    <header class='header'>
+        <h1>Hola, tu Usuario es <span class='usuario'>$usuario</span></h1>
+        <nav>
+            <a class='btn-salir' href='logica/salir.php'>Salir</a>
+        </nav>
+    </header>
+    <main>
+        <section class='tabla-section'>
+            <h2>Lista de Artistas</h2>";
+            
+    require "./logica/conexion.php";
+    mysqli_set_charset($conexion, 'utf8');
 
-if(!isset($usuario)){
+    $consulta_sql = "SELECT * FROM artistas";
+    $resultado = $conexion->query($consulta_sql);
+    $count = mysqli_num_rows($resultado);
 
-        header("location: ./index.php");
-}else{
-    
-    echo "<h1> hola tu Usuario es $usuario </h1> ";
-    echo "<a href='logica/salir.php'> SALIR</a>";
-    
-
-    // se usa el requiere para si psi se necesita el archivo conexion
-require "./logica/conexion.php";
-mysqli_set_charset($conexion,'utf8');
-
-//genear el query
-$consulta_sql="SELECT * FROM artistas";
-
-//mandar el query por medio de la conexion y almacenaremos el resultado en una variable
-$resultado = $conexion->query($consulta_sql);
-
-// Retorna el numero de filas del resultado. Si encuentra mas de uno lo usamos para imprimir el resultado en nuestra tabla
-$count = mysqli_num_rows($resultado); 
- 
-echo "<table border='2' >
-<tr>
-    <th>Artistas</th>
-    
-    <th>id</th>
-    <th>nombre_artista</th>
-    <th>Albums</th>
-    <th>Genero Musical</th>
-    <th>Disquera</th>
-    <th>Usuario</th>
-    <th>Contraseña</th>
-    <th>Fecha de Registro</th>
-    <th>Permisos</th>
-</tr>";
-
-
-
-if ( $count>0 ){
-    //aqui se pintarian los registro de la DB
-    while( $row = mysqli_fetch_assoc($resultado)  ){
-     echo "<tr>";
-     echo"<td>". $row['nombre_artista'] ."</td>";
-  
-     echo"<td>". $row['id'] ."</td>";
-     echo"<td>". $row['nombre_artista'] ."</td>";
-     echo"<td>". $row['albums'] ."</td>";
-     echo"<td>". $row['genero_musical'] ."</td>";
-     echo"<td>". $row['disquera'] ."</td>";
-     echo"<td>". $row['usuario'] ."</td>";
-     echo"<td>". $row['contraseña'] ."</td>";
-     echo"<td>". $row['fecha_registro'] ."</td>";
-     echo"<td>". $row['permisos'] ."</td>";
-     echo "</tr>";
-     
+    if ($count > 0) {
+        echo "<table class='tabla-estilos'>
+                <thead>
+                    <tr>
+                        <th>Artistas</th>
+                        <th>ID</th>
+                        <th>Nombre Artista</th>
+                        <th>Álbums</th>
+                        <th>Género Musical</th>
+                        <th>Disquera</th>
+                        <th>Usuario</th>
+                        <th>Contraseña</th>
+                        <th>Fecha de Registro</th>
+                        <th>Permisos</th>
+                    </tr>
+                </thead>
+                <tbody>";
+        while ($row = mysqli_fetch_assoc($resultado)) {
+            echo "<tr>
+                    <td>{$row['nombre_artista']}</td>
+                    <td>{$row['id']}</td>
+                    <td>{$row['nombre_artista']}</td>
+                    <td>{$row['albums']}</td>
+                    <td>{$row['genero_musical']}</td>
+                    <td>{$row['disquera']}</td>
+                    <td>{$row['usuario']}</td>
+                    <td>{$row['contraseña']}</td>
+                    <td>{$row['fecha_registro']}</td>
+                    <td>{$row['permisos']}</td>
+                </tr>";
+        }
+        echo "</tbody></table>";
+    } else {
+        echo "<p class='sin-registro'>Sin ningún registro</p>";
     }
-    echo "</table>";
 
-
-}else{
-    
-    
-    
-    echo " <h1 style='color:red' >Sin Ningun registro</h1>";
- } 
-  echo "
-    <h1><a href='EliminarUsuario.php'>ElimnarUsuario</a></h1>
-    <h1><a href='Registro.php'>Registro</a></h1>
-    ";
-    
+    echo "<div class='acciones'>
+            <a href='EliminarUsuario.php' class='btn'>Eliminar Usuario</a>
+            <a href='Registro.php' class='btn'>Registro</a>
+        </div>
+        </section>
+    </main>
+</body>
+</html>";
 }
-
 ?>
