@@ -1,4 +1,4 @@
-/* Estilos Generales */
+@import url(https://db.onlinewebfonts.com/c/67821e7ef9a2952d6e7757a6cae5a826?family=Novecento+WideBold);
 body {
     margin: 0;
     padding: 0;
@@ -12,11 +12,10 @@ body {
 
 /* Estructura del Login */
 .row {
-
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
 }
 
 .col {
@@ -32,10 +31,17 @@ body {
 /* Títulos */
 h1 {
     font-size: 24px;
+    font-family: 'Poppins';
     margin-bottom: 20px;
-    color: #333333;
+    color: #0032A0;
+    font-weight: bold;
 }
-
+p {
+    font-size: 14px;
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+    color: #0032A0;
+}
 /* Formulario */
 form {
     display: flex;
@@ -46,7 +52,8 @@ form {
 input[type="text"],
 input[type="password"] {
     padding: 10px;
-    font-size: 16px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 100%;
@@ -56,9 +63,12 @@ input[type="password"] {
 /* Botón */
 button {
     padding: 10px;
-    font-size: 16px;
+    font-size: 15px;
+    gap: 15px;
+    font-family: "Poppins";
     background-color: #EDFF44;
-    color: rgb(0, 0, 0);
+    color: #0032A0;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;

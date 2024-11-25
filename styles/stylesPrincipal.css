@@ -3,12 +3,12 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #ffffff;
     color: #333;
 }
 
 .header {
-    background-color: #ff6f00;
+    background-color: #0032A0;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -21,7 +21,7 @@ body {
 }
 
 .header .usuario {
-    color: #ffe6cc;
+    color: #EDFF44;
 }
 
 .header .btn-salir {
@@ -50,7 +50,8 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-size: 28px;
-    color: #ff6f00;
+    color: #0032A0;
+    font-weight: bold;
 }
 
 /* Table Styles */
@@ -70,8 +71,8 @@ body {
 }
 
 .tabla-estilos th {
-    background-color: #ff6f00;
-    color: #fff;
+    background-color: #0032A0;
+    color: #EDFF44;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -81,7 +82,7 @@ body {
 }
 
 .tabla-estilos tr:hover {
-    background-color: #ffe6cc;
+    background-color: #f7ffcc;
 }
 
 .sin-registro {
@@ -101,13 +102,21 @@ body {
     display: inline-block;
     margin: 5px;
     padding: 10px 20px;
-    background-color: #0275d8;
-    color: #fff;
+    background-color: #EDFF44;
+    color: #0032A0;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
+.check {
+    background-color: #EDFF44;
+    color: #0032A0;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
 .btn:hover {
-    background-color: #025aa5;
+    background-color: #d1e046;
 }

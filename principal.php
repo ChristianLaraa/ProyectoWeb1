@@ -10,12 +10,12 @@ if (!isset($usuario)) {
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Bienvenido</title>
+    <title>Dashboard - Principal</title>
     <link rel='stylesheet' href='./styles/stylesPrincipal.css'>
 </head>
 <body>
     <header class='header'>
-        <h1>Hola, tu Usuario es <span class='usuario'>$usuario</span></h1>
+        <h1>¡Hola, Buenas Tardes!  <span class='usuario'>$usuario</span></h1>
         <nav>
             <a class='btn-salir' href='logica/salir.php'>Salir</a>
         </nav>

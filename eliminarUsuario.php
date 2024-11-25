@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eliminar Usuario</title>
+    <link rel="stylesheet" href="./styles/stylesEliminarUsuario.css">
 </head>
 
 <body>
-    <h1 style=" text-align: center;" >Elimina Usuario</h1>
-    <form style=" text-align: center;" method="POST" action="./logica/deleteUsuario.php">
-
-        <input  type="text" name="usuario" placeholder="Usuario o correo del Artista"/>
-        <br />
-        <button type="submit">Eliminar usuario</button>
-
-    </form>
-    
-    <h1><a href="principal.php">Inicio de listas</a></h1>
-
+    <div class="container">
+        <h1>Eliminar Usuario</h1>
+        <form method="POST" action="./logica/deleteUsuario.php">
+            <input type="text" name="usuario" placeholder="Usuario o correo del Artista" required />
+            <button type="submit">Eliminar</button>
+        </form>
+        <a href="principal.php" class="btn-back">Inicio de Listas</a>
+    </div>
 </body>
 
 </html>
